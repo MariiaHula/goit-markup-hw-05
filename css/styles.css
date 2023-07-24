@@ -219,7 +219,7 @@ address {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  transition-property: color;
+  transition-property: background-color;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
@@ -676,9 +676,9 @@ transition-timing-function: var(--transition-func);
 
 .backdrop {
   position: absolute;
-  top: 80px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: 408px;
   height: 584px;
   background-color: var(--modal-background);

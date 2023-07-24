@@ -718,11 +718,7 @@ address {
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
-.close-button:hover,
-.close-button:focus {
-  background-color: var(--pressed-state);
-  border: none;
-}
+
 .close-back-icon {
   fill: var(--dark);
   transition-property: fill;
@@ -730,7 +726,13 @@ address {
   transition-timing-function: var(--transition-func);
 }
 
-.close-back-icon:hover,
-.close-back-icon:focus {
-  fill: #ffffff;
+.close-button:hover,
+.close-button:focus {
+  background-color: var(--pressed-state);
+  border: none;
+}
+
+.close-button:hover .close-back-icon,
+.close-button:focus .close-back-icon {
+  fill: var(--white-background);
 }

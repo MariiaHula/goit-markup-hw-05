@@ -230,10 +230,7 @@ address {
   border: 1px solid var(--accent);
   background-color: var(--light);
   color: var(--primary-brand);
-  transition-property: color;
-  transition-property: background-color;
-  transition-property: border-color;
-  transition-property: box-shadow;
+  transition-property: color, background-color, border-color, box-shadow;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
@@ -551,9 +548,7 @@ address {
   font-weight: 400;
   line-height: 1, 5;
   letter-spacing: 0.02em;
-  padding-left: 32px;
-  padding-top: 40px;
-  padding-right: 32px;
+  padding: 40px 32px;
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: var(--transition-dur);
@@ -678,16 +673,14 @@ address {
   position: fixed;
   opacity: 1;
   visibility: visible;
-  transition-property: visibility;
-  transition-property: opacity;
-  transition-property: transform;
-  transition-duration: var(--transition-dur);
-  transition-timing-function: var(--transition-func);
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   background: rgba(46, 47, 66, 0.4);
+  transition-property: opacity, visibility;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
 }
 
 .backdrop {
@@ -716,8 +709,9 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-property: background-color;
-  transition-property: border;
+  padding: 0;
+  cursor: pointer;
+  transition-property: border, background-color;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }

@@ -154,7 +154,7 @@ address {
 .link-nav-active::after {
   position: absolute;
   left: 0;
-  top: calc(100% - 4px);
+  bottom: -1px;
   display: block;
   content: '';
   width: 100%;
@@ -231,6 +231,9 @@ address {
   background-color: var(--light);
   color: var(--primary-brand);
   transition-property: color;
+  transition-property: background-color;
+  transition-property: border-color;
+  transition-property: box-shadow;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
@@ -264,7 +267,7 @@ address {
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
   background-color: var(--pressed-state);
   color: var(--white-background);
-  border: 1px solid transparent;
+  border-color: 1px solid transparent;
 }
 
 .portfolio-nav-btn {
@@ -474,7 +477,7 @@ address {
   color: var(--subtle-text);
   border-radius: 4px;
   border: 1px solid var(--subtle-text);
-  transition-property: color;
+  transition-property: color, border-color;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
@@ -517,15 +520,24 @@ address {
   margin-bottom: 0;
 }
 
+.project-card {
+  transition-property: box-shadow;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
+}
+
 .project-card-overlay-wrapper {
   position: relative;
   max-width: 360px;
   border: transparent;
   overflow: hidden;
-  transition-property: background, border, box-shadow;
+  transition-property: background;
+  transition-property: border;
+  transition-property: box-shadow;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -547,21 +559,23 @@ address {
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
-.project-card {
+.project-card-img {
   display: block;
 }
 
-.project-card-overlay-wrapper:hover,
-.project-card-overlay-wrapper:focus {
-  border: 1px solid var(--accent);
+.project-card:hover,
+.project-card:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.project-card-overlay-wrapper:hover .overlay,
-.project-card-overlay-wrapper:focus .overlay {
+.project-card:hover .overlay,
+.project-card:focus .overlay {
   transform: translateY(0%);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .project-card-text {
@@ -664,7 +678,9 @@ address {
   position: fixed;
   opacity: 1;
   visibility: visible;
-  transition-property: visibility, opacity, transform;
+  transition-property: visibility;
+  transition-property: opacity;
+  transition-property: transform;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
   top: 0;
@@ -680,7 +696,7 @@ address {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   background-color: var(--modal-background);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -692,12 +708,32 @@ address {
   top: 24px;
   right: 24px;
   display: flex;
-  padding: 8px;
   background-color: var(--accent);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: background-color;
+  transition-property: border;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
 }
-
+.close-button:hover,
+.close-button:focus {
+  background-color: var(--pressed-state);
+  border: none;
+}
 .close-back-icon {
   fill: var(--dark);
+  transition-property: fill;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
+}
+
+.close-back-icon:hover,
+.close-back-icon:focus {
+  fill: var(--white-background);
 }

@@ -518,34 +518,34 @@ address {
 }
 
 .project-card-overlay-wrapper {
-position: relative;
-max-width: 360px;
-border: transparent;
-overflow: hidden;
-transition-property: background, border, box-shadow;
-transition-duration: var(--transition-dur);
-transition-timing-function: var(--transition-func);
+  position: relative;
+  max-width: 360px;
+  border: transparent;
+  overflow: hidden;
+  transition-property: background, border, box-shadow;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
 }
 .overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 300px;
-background-color: var(--primary-brand);
-color: var(--light);
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 1,5;
-letter-spacing: 0.02em;
-padding-left: 32px ;
-padding-top: 40px;
-padding-right: 32px;
-transform: translateY(100%);
-transition-property: transform;
-transition-duration: var(--transition-dur);
-transition-timing-function: var(--transition-func);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-color: var(--primary-brand);
+  color: var(--light);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1, 5;
+  letter-spacing: 0.02em;
+  padding-left: 32px;
+  padding-top: 40px;
+  padding-right: 32px;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
 }
 .project-card {
   display: block;
@@ -694,7 +694,7 @@ transition-timing-function: var(--transition-func);
   display: flex;
   padding: 8px;
   background-color: var(--accent);
-  border: 1px solid rgba(0, 0, 0, 0.10);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
 

@@ -698,4 +698,6 @@ address {
   border-radius: 50%;
 }
 
-
+.close-back-icon {
+  fill: var(--dark);
+}
